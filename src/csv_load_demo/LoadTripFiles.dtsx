@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="LoadTripFiles"
   DTS:PackageType="5"
-  DTS:VersionBuild="24"
-  DTS:VersionGUID="{E83E95BE-54ED-436A-86D1-A68DDE041048}">
+  DTS:VersionBuild="34"
+  DTS:VersionGUID="{109BEB45-3B74-4F1A-809C-7EFD3B130960}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -21,6 +21,8 @@
       DTS:CreationName="FLATFILE"
       DTS:DTSID="{5A38A373-724C-40D1-A8D8-CBC7E046C88F}"
       DTS:ObjectName="Csv Connection">
+      <DTS:PropertyExpression
+        DTS:Name="ConnectionString">@[User::SourceFilePath]</DTS:PropertyExpression>
       <DTS:ObjectData>
         <DTS:ConnectionManager
           DTS:Format="Delimited"
@@ -30,7 +32,7 @@
           DTS:RowDelimiter=""
           DTS:TextQualifier="_x0022_"
           DTS:CodePage="1252"
-          DTS:ConnectionString="C:\code\ssis\csv_load_data\pending\202502-divvy-tripdata.csv">
+          DTS:ConnectionString="C:\code\ssis\csv_load_data\pending\test.csv">
           <DTS:FlatFileColumns>
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -39,7 +41,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="&quot;ride_id&quot;"
-              DTS:DTSID="{6007CC43-EA03-4DF6-809C-1F951FE5A54A}"
+              DTS:DTSID="{9E17E325-CC17-47D6-812A-86D7CF954685}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -48,7 +50,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="&quot;rideable_type&quot;"
-              DTS:DTSID="{C5CD09FD-B8D9-45CE-BB7D-969DB7969B87}"
+              DTS:DTSID="{FE0406EC-97C7-4B8C-8514-AB3AEEBBCF5C}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -56,7 +58,7 @@
               DTS:DataType="7"
               DTS:TextQualified="True"
               DTS:ObjectName="&quot;started_at&quot;"
-              DTS:DTSID="{3F0C8A09-A2E8-4DB1-9151-96CAE163CE75}"
+              DTS:DTSID="{4CFDA29A-4A09-4904-9085-194211F83D80}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -64,7 +66,7 @@
               DTS:DataType="7"
               DTS:TextQualified="True"
               DTS:ObjectName="&quot;ended_at&quot;"
-              DTS:DTSID="{286C7945-43CC-40F2-B1E0-F5772A14E22E}"
+              DTS:DTSID="{58BCE508-1F09-4BA2-BBA6-0020113C2BCE}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -73,7 +75,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="&quot;start_station_name&quot;"
-              DTS:DTSID="{B591AFFB-2794-4F00-A798-EBA4F8DA0339}"
+              DTS:DTSID="{79A85064-DD10-4409-A94F-0B6E802B5F4D}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -82,7 +84,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="&quot;start_station_id&quot;"
-              DTS:DTSID="{FA34FC16-4D45-42AA-9EDA-B7702CE1500A}"
+              DTS:DTSID="{2CFE0097-A986-4B45-9AAF-D154373B9856}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -91,7 +93,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="&quot;end_station_name&quot;"
-              DTS:DTSID="{E52B0329-596F-4E0A-8BB8-50D82291F2A9}"
+              DTS:DTSID="{E8632C84-93F5-432E-A97C-2FBCF4FE666D}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -100,7 +102,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="&quot;end_station_id&quot;"
-              DTS:DTSID="{96C13C7A-2514-40B5-BFC1-22560DD2174F}"
+              DTS:DTSID="{AEB9F62F-13CA-45CC-BDBE-8196188C2D6B}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -108,7 +110,7 @@
               DTS:DataType="4"
               DTS:TextQualified="True"
               DTS:ObjectName="&quot;start_lat&quot;"
-              DTS:DTSID="{AD65F8C3-46D4-4FEB-A62B-86DD0853206B}"
+              DTS:DTSID="{8B8BF580-01DA-4B36-B601-72A6C938E803}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -116,7 +118,7 @@
               DTS:DataType="4"
               DTS:TextQualified="True"
               DTS:ObjectName="&quot;start_lng&quot;"
-              DTS:DTSID="{CF65B1B9-F438-459F-B3E6-22A24236BEC6}"
+              DTS:DTSID="{5D207EDC-AFE4-4641-ABB6-135C2EDC3750}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -124,7 +126,7 @@
               DTS:DataType="4"
               DTS:TextQualified="True"
               DTS:ObjectName="&quot;end_lat&quot;"
-              DTS:DTSID="{3B7E9898-D9DF-4C52-9A48-0BF3CF14C6B4}"
+              DTS:DTSID="{5EB64E3A-7895-4E63-864B-66A7FBFDACA0}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -132,7 +134,7 @@
               DTS:DataType="4"
               DTS:TextQualified="True"
               DTS:ObjectName="&quot;end_lng&quot;"
-              DTS:DTSID="{A60E9D40-E092-44B8-AED6-291623FD3377}"
+              DTS:DTSID="{3CCFDDE8-596E-4FF2-97EF-F119B3F89C0F}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -141,7 +143,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="&quot;member_casual&quot;"
-              DTS:DTSID="{9338F9BA-F27E-47D1-B2F6-49A526876DA0}"
+              DTS:DTSID="{47443256-9AF6-49D0-91A7-0366FB7FC9B6}"
               DTS:CreationName="" />
           </DTS:FlatFileColumns>
         </DTS:ConnectionManager>
@@ -160,672 +162,846 @@
       </DTS:ObjectData>
     </DTS:ConnectionManager>
   </DTS:ConnectionManagers>
-  <DTS:Variables />
+  <DTS:Variables>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{8F17C705-99C7-4B7D-87F4-C11C9587DD1A}"
+      DTS:IncludeInDebugDump="6789"
+      DTS:Namespace="User"
+      DTS:ObjectName="MaxFilesToImport">
+      <DTS:VariableValue
+        DTS:DataType="3">3</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{C9EA911C-9942-4BAA-B653-B341733A4334}"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="SourceDirectory">
+      <DTS:VariableValue
+        DTS:DataType="8">C:\code\ssis\csv_load_data\pending\</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{3ED75A89-C525-4EE3-86AA-58CCE052E955}"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="SourceFileName">
+      <DTS:VariableValue
+        DTS:DataType="8">test.csv</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{F876300E-79C6-468E-9103-682ACE205D51}"
+      DTS:EvaluateAsExpression="True"
+      DTS:Expression="@[User::SourceDirectory] + @[User::SourceFileName]"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="SourceFilePath">
+      <DTS:VariableValue
+        DTS:DataType="8">C:\code\ssis\csv_load_data\pending\test.csv</DTS:VariableValue>
+    </DTS:Variable>
+  </DTS:Variables>
   <DTS:Executables>
     <DTS:Executable
-      DTS:refId="Package\Load Singles Trips File"
-      DTS:CreationName="Microsoft.Pipeline"
-      DTS:Description="Data Flow Task"
-      DTS:DTSID="{724E2F68-BFB8-4F0B-9857-1D429B817C83}"
-      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:refId="Package\Foreach Loop Container"
+      DTS:CreationName="STOCK:FOREACHLOOP"
+      DTS:Description="Read csv files in source directory"
+      DTS:DTSID="{8E987EFC-3FAE-4431-A4AB-CD578339DC2D}"
+      DTS:ExecutableType="STOCK:FOREACHLOOP"
       DTS:LocaleID="-1"
-      DTS:ObjectName="Load Singles Trips File"
-      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      DTS:ObjectName="Foreach Loop Container">
+      <DTS:ForEachEnumerator
+        DTS:CreationName="Microsoft.ForEachFileEnumerator"
+        DTS:DTSID="{5F93CDCD-48BC-49FC-A9C2-DCF12023ACF8}"
+        DTS:ObjectName="{5F93CDCD-48BC-49FC-A9C2-DCF12023ACF8}">
+        <DTS:PropertyExpression
+          DTS:Name="Directory">@[User::SourceDirectory]</DTS:PropertyExpression>
+        <DTS:ObjectData>
+          <ForEachFileEnumeratorProperties>
+            <FEFEProperty
+              Folder="C:\code\ssis\csv_load_data\pending\" />
+            <FEFEProperty
+              FileSpec="*.csv" />
+            <FEFEProperty
+              FileNameRetrievalType="1" />
+            <FEFEProperty
+              Recurse="0" />
+          </ForEachFileEnumeratorProperties>
+        </DTS:ObjectData>
+      </DTS:ForEachEnumerator>
       <DTS:Variables />
-      <DTS:ObjectData>
-        <pipeline
-          version="1">
-          <components>
-            <component
-              refId="Package\Load Singles Trips File\Flat File Source"
-              componentClassID="Microsoft.FlatFileSource"
-              contactInfo="Flat File Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
-              description="Flat File Source"
-              localeId="1033"
-              name="Flat File Source"
-              usesDispositions="true"
+      <DTS:Executables>
+        <DTS:Executable
+          DTS:refId="Package\Foreach Loop Container\Load Singles Trips File"
+          DTS:CreationName="Microsoft.Pipeline"
+          DTS:Description="Data Flow Task"
+          DTS:DTSID="{724E2F68-BFB8-4F0B-9857-1D429B817C83}"
+          DTS:ExecutableType="Microsoft.Pipeline"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="Load Singles Trips File"
+          DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <pipeline
               version="1">
-              <properties>
-                <property
-                  dataType="System.Boolean"
-                  description="Specifies whether zero-length columns are treated as null."
-                  name="RetainNulls">false</property>
-                <property
-                  dataType="System.String"
-                  description="Specifies the name of an output column containing the file name. If no name is specified, no output column containing the file name will be generated."
-                  name="FileNameColumnName"></property>
-              </properties>
-              <connections>
-                <connection
-                  refId="Package\Load Singles Trips File\Flat File Source.Connections[FlatFileConnection]"
-                  connectionManagerID="Package.ConnectionManagers[Csv Connection]"
-                  connectionManagerRefId="Package.ConnectionManagers[Csv Connection]"
-                  name="FlatFileConnection" />
-              </connections>
-              <outputs>
-                <output
-                  refId="Package\Load Singles Trips File\Flat File Source.Outputs[Flat File Source Output]"
-                  name="Flat File Source Output">
-                  <outputColumns>
-                    <outputColumn
-                      refId="Package\Load Singles Trips File\Flat File Source.Outputs[Flat File Source Output].Columns[&quot;ride_id&quot;]"
-                      dataType="wstr"
-                      errorOrTruncationOperation="Conversion"
+              <components>
+                <component
+                  refId="Package\Foreach Loop Container\Load Singles Trips File\Derived Column"
+                  componentClassID="Microsoft.DerivedColumn"
+                  contactInfo="Derived Column;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+                  description="Creates new column values by applying expressions to transformation input columns. Create new columns or overwrite existing ones. For example, concatenate the values from the 'first name' and 'last name' column to make a 'full name' column."
+                  name="Derived Column"
+                  usesDispositions="true">
+                  <inputs>
+                    <input
+                      refId="Package\Foreach Loop Container\Load Singles Trips File\Derived Column.Inputs[Derived Column Input]"
+                      description="Input to the Derived Column Transformation"
+                      name="Derived Column Input">
+                      <externalMetadataColumns />
+                    </input>
+                  </inputs>
+                  <outputs>
+                    <output
+                      refId="Package\Foreach Loop Container\Load Singles Trips File\Derived Column.Outputs[Derived Column Output]"
+                      description="Default Output of the Derived Column Transformation"
+                      exclusionGroup="1"
+                      name="Derived Column Output"
+                      synchronousInputId="Package\Foreach Loop Container\Load Singles Trips File\Derived Column.Inputs[Derived Column Input]">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\Load Singles Trips File\Derived Column.Outputs[Derived Column Output].Columns[source_file_name]"
+                          dataType="wstr"
+                          errorOrTruncationOperation="Computation"
+                          errorRowDisposition="FailComponent"
+                          length="50"
+                          lineageId="Package\Foreach Loop Container\Load Singles Trips File\Derived Column.Outputs[Derived Column Output].Columns[source_file_name]"
+                          name="source_file_name"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.String"
+                              description="Derived Column Expression"
+                              name="Expression">@[User::SourceFileName]</property>
+                            <property
+                              containsID="true"
+                              dataType="System.String"
+                              description="Derived Column Friendly Expression"
+                              expressionType="Notify"
+                              name="FriendlyExpression">@[User::SourceFileName]</property>
+                          </properties>
+                        </outputColumn>
+                      </outputColumns>
+                      <externalMetadataColumns />
+                    </output>
+                    <output
+                      refId="Package\Foreach Loop Container\Load Singles Trips File\Derived Column.Outputs[Derived Column Error Output]"
+                      description="Error Output of the Derived Column Transformation"
+                      exclusionGroup="1"
+                      isErrorOut="true"
+                      name="Derived Column Error Output"
+                      synchronousInputId="Package\Foreach Loop Container\Load Singles Trips File\Derived Column.Inputs[Derived Column Input]">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\Load Singles Trips File\Derived Column.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                          dataType="i4"
+                          lineageId="Package\Foreach Loop Container\Load Singles Trips File\Derived Column.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                          name="ErrorCode"
+                          specialFlags="1" />
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\Load Singles Trips File\Derived Column.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                          dataType="i4"
+                          lineageId="Package\Foreach Loop Container\Load Singles Trips File\Derived Column.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                          name="ErrorColumn"
+                          specialFlags="2" />
+                      </outputColumns>
+                      <externalMetadataColumns />
+                    </output>
+                  </outputs>
+                </component>
+                <component
+                  refId="Package\Foreach Loop Container\Load Singles Trips File\Flat File Source"
+                  componentClassID="Microsoft.FlatFileSource"
+                  contactInfo="Flat File Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+                  description="Flat File Source"
+                  localeId="1033"
+                  name="Flat File Source"
+                  usesDispositions="true"
+                  version="1">
+                  <properties>
+                    <property
+                      dataType="System.Boolean"
+                      description="Specifies whether zero-length columns are treated as null."
+                      name="RetainNulls">false</property>
+                    <property
+                      dataType="System.String"
+                      description="Specifies the name of an output column containing the file name. If no name is specified, no output column containing the file name will be generated."
+                      name="FileNameColumnName"></property>
+                  </properties>
+                  <connections>
+                    <connection
+                      refId="Package\Foreach Loop Container\Load Singles Trips File\Flat File Source.Connections[FlatFileConnection]"
+                      connectionManagerID="Package.ConnectionManagers[Csv Connection]"
+                      connectionManagerRefId="Package.ConnectionManagers[Csv Connection]"
+                      name="FlatFileConnection" />
+                  </connections>
+                  <outputs>
+                    <output
+                      refId="Package\Foreach Loop Container\Load Singles Trips File\Flat File Source.Outputs[Flat File Source Output]"
+                      name="Flat File Source Output">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\Load Singles Trips File\Flat File Source.Outputs[Flat File Source Output].Columns[&quot;ride_id&quot;]"
+                          dataType="wstr"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Foreach Loop Container\Load Singles Trips File\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[&quot;ride_id&quot;]"
+                          length="50"
+                          lineageId="Package\Foreach Loop Container\Load Singles Trips File\Flat File Source.Outputs[Flat File Source Output].Columns[&quot;ride_id&quot;]"
+                          name="&quot;ride_id&quot;"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\Load Singles Trips File\Flat File Source.Outputs[Flat File Source Output].Columns[&quot;rideable_type&quot;]"
+                          dataType="wstr"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Foreach Loop Container\Load Singles Trips File\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[&quot;rideable_type&quot;]"
+                          length="50"
+                          lineageId="Package\Foreach Loop Container\Load Singles Trips File\Flat File Source.Outputs[Flat File Source Output].Columns[&quot;rideable_type&quot;]"
+                          name="&quot;rideable_type&quot;"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\Load Singles Trips File\Flat File Source.Outputs[Flat File Source Output].Columns[&quot;started_at&quot;]"
+                          dataType="date"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Foreach Loop Container\Load Singles Trips File\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[&quot;started_at&quot;]"
+                          lineageId="Package\Foreach Loop Container\Load Singles Trips File\Flat File Source.Outputs[Flat File Source Output].Columns[&quot;started_at&quot;]"
+                          name="&quot;started_at&quot;"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\Load Singles Trips File\Flat File Source.Outputs[Flat File Source Output].Columns[&quot;ended_at&quot;]"
+                          dataType="date"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Foreach Loop Container\Load Singles Trips File\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[&quot;ended_at&quot;]"
+                          lineageId="Package\Foreach Loop Container\Load Singles Trips File\Flat File Source.Outputs[Flat File Source Output].Columns[&quot;ended_at&quot;]"
+                          name="&quot;ended_at&quot;"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\Load Singles Trips File\Flat File Source.Outputs[Flat File Source Output].Columns[&quot;start_station_name&quot;]"
+                          dataType="wstr"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Foreach Loop Container\Load Singles Trips File\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[&quot;start_station_name&quot;]"
+                          length="256"
+                          lineageId="Package\Foreach Loop Container\Load Singles Trips File\Flat File Source.Outputs[Flat File Source Output].Columns[&quot;start_station_name&quot;]"
+                          name="&quot;start_station_name&quot;"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\Load Singles Trips File\Flat File Source.Outputs[Flat File Source Output].Columns[&quot;start_station_id&quot;]"
+                          dataType="wstr"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Foreach Loop Container\Load Singles Trips File\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[&quot;start_station_id&quot;]"
+                          length="50"
+                          lineageId="Package\Foreach Loop Container\Load Singles Trips File\Flat File Source.Outputs[Flat File Source Output].Columns[&quot;start_station_id&quot;]"
+                          name="&quot;start_station_id&quot;"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\Load Singles Trips File\Flat File Source.Outputs[Flat File Source Output].Columns[&quot;end_station_name&quot;]"
+                          dataType="wstr"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Foreach Loop Container\Load Singles Trips File\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[&quot;end_station_name&quot;]"
+                          length="256"
+                          lineageId="Package\Foreach Loop Container\Load Singles Trips File\Flat File Source.Outputs[Flat File Source Output].Columns[&quot;end_station_name&quot;]"
+                          name="&quot;end_station_name&quot;"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\Load Singles Trips File\Flat File Source.Outputs[Flat File Source Output].Columns[&quot;end_station_id&quot;]"
+                          dataType="wstr"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Foreach Loop Container\Load Singles Trips File\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[&quot;end_station_id&quot;]"
+                          length="50"
+                          lineageId="Package\Foreach Loop Container\Load Singles Trips File\Flat File Source.Outputs[Flat File Source Output].Columns[&quot;end_station_id&quot;]"
+                          name="&quot;end_station_id&quot;"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\Load Singles Trips File\Flat File Source.Outputs[Flat File Source Output].Columns[&quot;start_lat&quot;]"
+                          dataType="r4"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Foreach Loop Container\Load Singles Trips File\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[&quot;start_lat&quot;]"
+                          lineageId="Package\Foreach Loop Container\Load Singles Trips File\Flat File Source.Outputs[Flat File Source Output].Columns[&quot;start_lat&quot;]"
+                          name="&quot;start_lat&quot;"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\Load Singles Trips File\Flat File Source.Outputs[Flat File Source Output].Columns[&quot;start_lng&quot;]"
+                          dataType="r4"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Foreach Loop Container\Load Singles Trips File\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[&quot;start_lng&quot;]"
+                          lineageId="Package\Foreach Loop Container\Load Singles Trips File\Flat File Source.Outputs[Flat File Source Output].Columns[&quot;start_lng&quot;]"
+                          name="&quot;start_lng&quot;"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\Load Singles Trips File\Flat File Source.Outputs[Flat File Source Output].Columns[&quot;end_lat&quot;]"
+                          dataType="r4"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Foreach Loop Container\Load Singles Trips File\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[&quot;end_lat&quot;]"
+                          lineageId="Package\Foreach Loop Container\Load Singles Trips File\Flat File Source.Outputs[Flat File Source Output].Columns[&quot;end_lat&quot;]"
+                          name="&quot;end_lat&quot;"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\Load Singles Trips File\Flat File Source.Outputs[Flat File Source Output].Columns[&quot;end_lng&quot;]"
+                          dataType="r4"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Foreach Loop Container\Load Singles Trips File\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[&quot;end_lng&quot;]"
+                          lineageId="Package\Foreach Loop Container\Load Singles Trips File\Flat File Source.Outputs[Flat File Source Output].Columns[&quot;end_lng&quot;]"
+                          name="&quot;end_lng&quot;"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\Load Singles Trips File\Flat File Source.Outputs[Flat File Source Output].Columns[&quot;member_casual&quot;]"
+                          dataType="wstr"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Foreach Loop Container\Load Singles Trips File\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[&quot;member_casual&quot;]"
+                          length="50"
+                          lineageId="Package\Foreach Loop Container\Load Singles Trips File\Flat File Source.Outputs[Flat File Source Output].Columns[&quot;member_casual&quot;]"
+                          name="&quot;member_casual&quot;"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                      </outputColumns>
+                      <externalMetadataColumns
+                        isUsed="True">
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\Load Singles Trips File\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[&quot;ride_id&quot;]"
+                          dataType="wstr"
+                          length="50"
+                          name="&quot;ride_id&quot;" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\Load Singles Trips File\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[&quot;rideable_type&quot;]"
+                          dataType="wstr"
+                          length="50"
+                          name="&quot;rideable_type&quot;" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\Load Singles Trips File\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[&quot;started_at&quot;]"
+                          dataType="date"
+                          name="&quot;started_at&quot;" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\Load Singles Trips File\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[&quot;ended_at&quot;]"
+                          dataType="date"
+                          name="&quot;ended_at&quot;" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\Load Singles Trips File\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[&quot;start_station_name&quot;]"
+                          dataType="wstr"
+                          length="256"
+                          name="&quot;start_station_name&quot;" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\Load Singles Trips File\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[&quot;start_station_id&quot;]"
+                          dataType="wstr"
+                          length="50"
+                          name="&quot;start_station_id&quot;" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\Load Singles Trips File\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[&quot;end_station_name&quot;]"
+                          dataType="wstr"
+                          length="256"
+                          name="&quot;end_station_name&quot;" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\Load Singles Trips File\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[&quot;end_station_id&quot;]"
+                          dataType="wstr"
+                          length="50"
+                          name="&quot;end_station_id&quot;" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\Load Singles Trips File\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[&quot;start_lat&quot;]"
+                          dataType="r4"
+                          name="&quot;start_lat&quot;" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\Load Singles Trips File\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[&quot;start_lng&quot;]"
+                          dataType="r4"
+                          name="&quot;start_lng&quot;" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\Load Singles Trips File\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[&quot;end_lat&quot;]"
+                          dataType="r4"
+                          name="&quot;end_lat&quot;" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\Load Singles Trips File\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[&quot;end_lng&quot;]"
+                          dataType="r4"
+                          name="&quot;end_lng&quot;" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\Load Singles Trips File\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[&quot;member_casual&quot;]"
+                          dataType="wstr"
+                          length="50"
+                          name="&quot;member_casual&quot;" />
+                      </externalMetadataColumns>
+                    </output>
+                    <output
+                      refId="Package\Foreach Loop Container\Load Singles Trips File\Flat File Source.Outputs[Flat File Source Error Output]"
+                      isErrorOut="true"
+                      name="Flat File Source Error Output">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\Load Singles Trips File\Flat File Source.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                          codePage="1252"
+                          dataType="text"
+                          description="Flat File Source Error Output Column"
+                          lineageId="Package\Foreach Loop Container\Load Singles Trips File\Flat File Source.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                          name="Flat File Source Error Output Column" />
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\Load Singles Trips File\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                          dataType="i4"
+                          lineageId="Package\Foreach Loop Container\Load Singles Trips File\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                          name="ErrorCode"
+                          specialFlags="1" />
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\Load Singles Trips File\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                          dataType="i4"
+                          lineageId="Package\Foreach Loop Container\Load Singles Trips File\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                          name="ErrorColumn"
+                          specialFlags="2" />
+                      </outputColumns>
+                      <externalMetadataColumns />
+                    </output>
+                  </outputs>
+                </component>
+                <component
+                  refId="Package\Foreach Loop Container\Load Singles Trips File\OLE DB Destination"
+                  componentClassID="Microsoft.OLEDBDestination"
+                  contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+                  description="OLE DB Destination"
+                  name="OLE DB Destination"
+                  usesDispositions="true"
+                  version="4">
+                  <properties>
+                    <property
+                      dataType="System.Int32"
+                      description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                      name="CommandTimeout">0</property>
+                    <property
+                      dataType="System.String"
+                      description="Specifies the name of the database object used to open a rowset."
+                      name="OpenRowset">[dbo].[trips_history]</property>
+                    <property
+                      dataType="System.String"
+                      description="Specifies the variable that contains the name of the database object used to open a rowset."
+                      name="OpenRowsetVariable"></property>
+                    <property
+                      dataType="System.String"
+                      description="The SQL command to be executed."
+                      name="SqlCommand"
+                      UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies the column code page to use when code page information is unavailable from the data source."
+                      name="DefaultCodePage">1252</property>
+                    <property
+                      dataType="System.Boolean"
+                      description="Forces the use of the DefaultCodePage property value when describing character data."
+                      name="AlwaysUseDefaultCodePage">false</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies the mode used to access the database."
+                      name="AccessMode"
+                      typeConverter="AccessMode">3</property>
+                    <property
+                      dataType="System.Boolean"
+                      description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                      name="FastLoadKeepIdentity">false</property>
+                    <property
+                      dataType="System.Boolean"
+                      description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                      name="FastLoadKeepNulls">false</property>
+                    <property
+                      dataType="System.String"
+                      description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                      name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                      name="FastLoadMaxInsertCommitSize">2147483647</property>
+                  </properties>
+                  <connections>
+                    <connection
+                      refId="Package\Foreach Loop Container\Load Singles Trips File\OLE DB Destination.Connections[OleDbConnection]"
+                      connectionManagerID="Package.ConnectionManagers[localhost.CycleTrips]"
+                      connectionManagerRefId="Package.ConnectionManagers[localhost.CycleTrips]"
+                      description="The OLE DB runtime connection used to access the database."
+                      name="OleDbConnection" />
+                  </connections>
+                  <inputs>
+                    <input
+                      refId="Package\Foreach Loop Container\Load Singles Trips File\OLE DB Destination.Inputs[OLE DB Destination Input]"
+                      errorOrTruncationOperation="Insert"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Load Singles Trips File\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[&quot;ride_id&quot;]"
-                      length="50"
-                      lineageId="Package\Load Singles Trips File\Flat File Source.Outputs[Flat File Source Output].Columns[&quot;ride_id&quot;]"
-                      name="&quot;ride_id&quot;"
-                      truncationRowDisposition="FailComponent">
-                      <properties>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
-                          name="FastParse">false</property>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the data is in binary format."
-                          name="UseBinaryFormat">false</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Load Singles Trips File\Flat File Source.Outputs[Flat File Source Output].Columns[&quot;rideable_type&quot;]"
-                      dataType="wstr"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Load Singles Trips File\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[&quot;rideable_type&quot;]"
-                      length="50"
-                      lineageId="Package\Load Singles Trips File\Flat File Source.Outputs[Flat File Source Output].Columns[&quot;rideable_type&quot;]"
-                      name="&quot;rideable_type&quot;"
-                      truncationRowDisposition="FailComponent">
-                      <properties>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
-                          name="FastParse">false</property>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the data is in binary format."
-                          name="UseBinaryFormat">false</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Load Singles Trips File\Flat File Source.Outputs[Flat File Source Output].Columns[&quot;started_at&quot;]"
-                      dataType="date"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Load Singles Trips File\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[&quot;started_at&quot;]"
-                      lineageId="Package\Load Singles Trips File\Flat File Source.Outputs[Flat File Source Output].Columns[&quot;started_at&quot;]"
-                      name="&quot;started_at&quot;"
-                      truncationRowDisposition="FailComponent">
-                      <properties>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
-                          name="FastParse">false</property>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the data is in binary format."
-                          name="UseBinaryFormat">false</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Load Singles Trips File\Flat File Source.Outputs[Flat File Source Output].Columns[&quot;ended_at&quot;]"
-                      dataType="date"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Load Singles Trips File\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[&quot;ended_at&quot;]"
-                      lineageId="Package\Load Singles Trips File\Flat File Source.Outputs[Flat File Source Output].Columns[&quot;ended_at&quot;]"
-                      name="&quot;ended_at&quot;"
-                      truncationRowDisposition="FailComponent">
-                      <properties>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
-                          name="FastParse">false</property>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the data is in binary format."
-                          name="UseBinaryFormat">false</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Load Singles Trips File\Flat File Source.Outputs[Flat File Source Output].Columns[&quot;start_station_name&quot;]"
-                      dataType="wstr"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Load Singles Trips File\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[&quot;start_station_name&quot;]"
-                      length="256"
-                      lineageId="Package\Load Singles Trips File\Flat File Source.Outputs[Flat File Source Output].Columns[&quot;start_station_name&quot;]"
-                      name="&quot;start_station_name&quot;"
-                      truncationRowDisposition="FailComponent">
-                      <properties>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
-                          name="FastParse">false</property>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the data is in binary format."
-                          name="UseBinaryFormat">false</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Load Singles Trips File\Flat File Source.Outputs[Flat File Source Output].Columns[&quot;start_station_id&quot;]"
-                      dataType="wstr"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Load Singles Trips File\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[&quot;start_station_id&quot;]"
-                      length="50"
-                      lineageId="Package\Load Singles Trips File\Flat File Source.Outputs[Flat File Source Output].Columns[&quot;start_station_id&quot;]"
-                      name="&quot;start_station_id&quot;"
-                      truncationRowDisposition="FailComponent">
-                      <properties>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
-                          name="FastParse">false</property>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the data is in binary format."
-                          name="UseBinaryFormat">false</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Load Singles Trips File\Flat File Source.Outputs[Flat File Source Output].Columns[&quot;end_station_name&quot;]"
-                      dataType="wstr"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Load Singles Trips File\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[&quot;end_station_name&quot;]"
-                      length="256"
-                      lineageId="Package\Load Singles Trips File\Flat File Source.Outputs[Flat File Source Output].Columns[&quot;end_station_name&quot;]"
-                      name="&quot;end_station_name&quot;"
-                      truncationRowDisposition="FailComponent">
-                      <properties>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
-                          name="FastParse">false</property>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the data is in binary format."
-                          name="UseBinaryFormat">false</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Load Singles Trips File\Flat File Source.Outputs[Flat File Source Output].Columns[&quot;end_station_id&quot;]"
-                      dataType="wstr"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Load Singles Trips File\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[&quot;end_station_id&quot;]"
-                      length="50"
-                      lineageId="Package\Load Singles Trips File\Flat File Source.Outputs[Flat File Source Output].Columns[&quot;end_station_id&quot;]"
-                      name="&quot;end_station_id&quot;"
-                      truncationRowDisposition="FailComponent">
-                      <properties>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
-                          name="FastParse">false</property>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the data is in binary format."
-                          name="UseBinaryFormat">false</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Load Singles Trips File\Flat File Source.Outputs[Flat File Source Output].Columns[&quot;start_lat&quot;]"
-                      dataType="r4"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Load Singles Trips File\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[&quot;start_lat&quot;]"
-                      lineageId="Package\Load Singles Trips File\Flat File Source.Outputs[Flat File Source Output].Columns[&quot;start_lat&quot;]"
-                      name="&quot;start_lat&quot;"
-                      truncationRowDisposition="FailComponent">
-                      <properties>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
-                          name="FastParse">false</property>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the data is in binary format."
-                          name="UseBinaryFormat">false</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Load Singles Trips File\Flat File Source.Outputs[Flat File Source Output].Columns[&quot;start_lng&quot;]"
-                      dataType="r4"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Load Singles Trips File\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[&quot;start_lng&quot;]"
-                      lineageId="Package\Load Singles Trips File\Flat File Source.Outputs[Flat File Source Output].Columns[&quot;start_lng&quot;]"
-                      name="&quot;start_lng&quot;"
-                      truncationRowDisposition="FailComponent">
-                      <properties>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
-                          name="FastParse">false</property>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the data is in binary format."
-                          name="UseBinaryFormat">false</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Load Singles Trips File\Flat File Source.Outputs[Flat File Source Output].Columns[&quot;end_lat&quot;]"
-                      dataType="r4"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Load Singles Trips File\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[&quot;end_lat&quot;]"
-                      lineageId="Package\Load Singles Trips File\Flat File Source.Outputs[Flat File Source Output].Columns[&quot;end_lat&quot;]"
-                      name="&quot;end_lat&quot;"
-                      truncationRowDisposition="FailComponent">
-                      <properties>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
-                          name="FastParse">false</property>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the data is in binary format."
-                          name="UseBinaryFormat">false</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Load Singles Trips File\Flat File Source.Outputs[Flat File Source Output].Columns[&quot;end_lng&quot;]"
-                      dataType="r4"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Load Singles Trips File\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[&quot;end_lng&quot;]"
-                      lineageId="Package\Load Singles Trips File\Flat File Source.Outputs[Flat File Source Output].Columns[&quot;end_lng&quot;]"
-                      name="&quot;end_lng&quot;"
-                      truncationRowDisposition="FailComponent">
-                      <properties>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
-                          name="FastParse">false</property>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the data is in binary format."
-                          name="UseBinaryFormat">false</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Load Singles Trips File\Flat File Source.Outputs[Flat File Source Output].Columns[&quot;member_casual&quot;]"
-                      dataType="wstr"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Load Singles Trips File\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[&quot;member_casual&quot;]"
-                      length="50"
-                      lineageId="Package\Load Singles Trips File\Flat File Source.Outputs[Flat File Source Output].Columns[&quot;member_casual&quot;]"
-                      name="&quot;member_casual&quot;"
-                      truncationRowDisposition="FailComponent">
-                      <properties>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
-                          name="FastParse">false</property>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the data is in binary format."
-                          name="UseBinaryFormat">false</property>
-                      </properties>
-                    </outputColumn>
-                  </outputColumns>
-                  <externalMetadataColumns
-                    isUsed="True">
-                    <externalMetadataColumn
-                      refId="Package\Load Singles Trips File\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[&quot;ride_id&quot;]"
-                      dataType="wstr"
-                      length="50"
-                      name="&quot;ride_id&quot;" />
-                    <externalMetadataColumn
-                      refId="Package\Load Singles Trips File\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[&quot;rideable_type&quot;]"
-                      dataType="wstr"
-                      length="50"
-                      name="&quot;rideable_type&quot;" />
-                    <externalMetadataColumn
-                      refId="Package\Load Singles Trips File\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[&quot;started_at&quot;]"
-                      dataType="date"
-                      name="&quot;started_at&quot;" />
-                    <externalMetadataColumn
-                      refId="Package\Load Singles Trips File\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[&quot;ended_at&quot;]"
-                      dataType="date"
-                      name="&quot;ended_at&quot;" />
-                    <externalMetadataColumn
-                      refId="Package\Load Singles Trips File\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[&quot;start_station_name&quot;]"
-                      dataType="wstr"
-                      length="256"
-                      name="&quot;start_station_name&quot;" />
-                    <externalMetadataColumn
-                      refId="Package\Load Singles Trips File\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[&quot;start_station_id&quot;]"
-                      dataType="wstr"
-                      length="50"
-                      name="&quot;start_station_id&quot;" />
-                    <externalMetadataColumn
-                      refId="Package\Load Singles Trips File\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[&quot;end_station_name&quot;]"
-                      dataType="wstr"
-                      length="256"
-                      name="&quot;end_station_name&quot;" />
-                    <externalMetadataColumn
-                      refId="Package\Load Singles Trips File\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[&quot;end_station_id&quot;]"
-                      dataType="wstr"
-                      length="50"
-                      name="&quot;end_station_id&quot;" />
-                    <externalMetadataColumn
-                      refId="Package\Load Singles Trips File\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[&quot;start_lat&quot;]"
-                      dataType="r4"
-                      name="&quot;start_lat&quot;" />
-                    <externalMetadataColumn
-                      refId="Package\Load Singles Trips File\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[&quot;start_lng&quot;]"
-                      dataType="r4"
-                      name="&quot;start_lng&quot;" />
-                    <externalMetadataColumn
-                      refId="Package\Load Singles Trips File\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[&quot;end_lat&quot;]"
-                      dataType="r4"
-                      name="&quot;end_lat&quot;" />
-                    <externalMetadataColumn
-                      refId="Package\Load Singles Trips File\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[&quot;end_lng&quot;]"
-                      dataType="r4"
-                      name="&quot;end_lng&quot;" />
-                    <externalMetadataColumn
-                      refId="Package\Load Singles Trips File\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[&quot;member_casual&quot;]"
-                      dataType="wstr"
-                      length="50"
-                      name="&quot;member_casual&quot;" />
-                  </externalMetadataColumns>
-                </output>
-                <output
-                  refId="Package\Load Singles Trips File\Flat File Source.Outputs[Flat File Source Error Output]"
-                  isErrorOut="true"
-                  name="Flat File Source Error Output">
-                  <outputColumns>
-                    <outputColumn
-                      refId="Package\Load Singles Trips File\Flat File Source.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
-                      codePage="1252"
-                      dataType="text"
-                      description="Flat File Source Error Output Column"
-                      lineageId="Package\Load Singles Trips File\Flat File Source.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
-                      name="Flat File Source Error Output Column" />
-                    <outputColumn
-                      refId="Package\Load Singles Trips File\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
-                      dataType="i4"
-                      lineageId="Package\Load Singles Trips File\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
-                      name="ErrorCode"
-                      specialFlags="1" />
-                    <outputColumn
-                      refId="Package\Load Singles Trips File\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
-                      dataType="i4"
-                      lineageId="Package\Load Singles Trips File\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
-                      name="ErrorColumn"
-                      specialFlags="2" />
-                  </outputColumns>
-                  <externalMetadataColumns />
-                </output>
-              </outputs>
-            </component>
-            <component
-              refId="Package\Load Singles Trips File\OLE DB Destination"
-              componentClassID="Microsoft.OLEDBDestination"
-              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
-              description="OLE DB Destination"
-              name="OLE DB Destination"
-              usesDispositions="true"
-              version="4">
-              <properties>
-                <property
-                  dataType="System.Int32"
-                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
-                  name="CommandTimeout">0</property>
-                <property
-                  dataType="System.String"
-                  description="Specifies the name of the database object used to open a rowset."
-                  name="OpenRowset">[dbo].[trips_history]</property>
-                <property
-                  dataType="System.String"
-                  description="Specifies the variable that contains the name of the database object used to open a rowset."
-                  name="OpenRowsetVariable"></property>
-                <property
-                  dataType="System.String"
-                  description="The SQL command to be executed."
-                  name="SqlCommand"
-                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
-                <property
-                  dataType="System.Int32"
-                  description="Specifies the column code page to use when code page information is unavailable from the data source."
-                  name="DefaultCodePage">1252</property>
-                <property
-                  dataType="System.Boolean"
-                  description="Forces the use of the DefaultCodePage property value when describing character data."
-                  name="AlwaysUseDefaultCodePage">false</property>
-                <property
-                  dataType="System.Int32"
-                  description="Specifies the mode used to access the database."
-                  name="AccessMode"
-                  typeConverter="AccessMode">3</property>
-                <property
-                  dataType="System.Boolean"
-                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
-                  name="FastLoadKeepIdentity">false</property>
-                <property
-                  dataType="System.Boolean"
-                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
-                  name="FastLoadKeepNulls">false</property>
-                <property
-                  dataType="System.String"
-                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
-                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
-                <property
-                  dataType="System.Int32"
-                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
-                  name="FastLoadMaxInsertCommitSize">2147483647</property>
-              </properties>
-              <connections>
-                <connection
-                  refId="Package\Load Singles Trips File\OLE DB Destination.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[localhost.CycleTrips]"
-                  connectionManagerRefId="Package.ConnectionManagers[localhost.CycleTrips]"
-                  description="The OLE DB runtime connection used to access the database."
-                  name="OleDbConnection" />
-              </connections>
-              <inputs>
-                <input
-                  refId="Package\Load Singles Trips File\OLE DB Destination.Inputs[OLE DB Destination Input]"
-                  errorOrTruncationOperation="Insert"
-                  errorRowDisposition="FailComponent"
-                  hasSideEffects="true"
-                  name="OLE DB Destination Input">
-                  <inputColumns>
-                    <inputColumn
-                      refId="Package\Load Singles Trips File\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[&quot;ride_id&quot;]"
-                      cachedDataType="wstr"
-                      cachedLength="50"
-                      cachedName="&quot;ride_id&quot;"
-                      externalMetadataColumnId="Package\Load Singles Trips File\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[ride_id]"
-                      lineageId="Package\Load Singles Trips File\Flat File Source.Outputs[Flat File Source Output].Columns[&quot;ride_id&quot;]" />
-                    <inputColumn
-                      refId="Package\Load Singles Trips File\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[&quot;rideable_type&quot;]"
-                      cachedDataType="wstr"
-                      cachedLength="50"
-                      cachedName="&quot;rideable_type&quot;"
-                      externalMetadataColumnId="Package\Load Singles Trips File\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[rideable_type]"
-                      lineageId="Package\Load Singles Trips File\Flat File Source.Outputs[Flat File Source Output].Columns[&quot;rideable_type&quot;]" />
-                    <inputColumn
-                      refId="Package\Load Singles Trips File\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[&quot;started_at&quot;]"
-                      cachedDataType="date"
-                      cachedName="&quot;started_at&quot;"
-                      externalMetadataColumnId="Package\Load Singles Trips File\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[started_at]"
-                      lineageId="Package\Load Singles Trips File\Flat File Source.Outputs[Flat File Source Output].Columns[&quot;started_at&quot;]" />
-                    <inputColumn
-                      refId="Package\Load Singles Trips File\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[&quot;ended_at&quot;]"
-                      cachedDataType="date"
-                      cachedName="&quot;ended_at&quot;"
-                      externalMetadataColumnId="Package\Load Singles Trips File\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[ended_at]"
-                      lineageId="Package\Load Singles Trips File\Flat File Source.Outputs[Flat File Source Output].Columns[&quot;ended_at&quot;]" />
-                    <inputColumn
-                      refId="Package\Load Singles Trips File\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[&quot;start_station_name&quot;]"
-                      cachedDataType="wstr"
-                      cachedLength="256"
-                      cachedName="&quot;start_station_name&quot;"
-                      externalMetadataColumnId="Package\Load Singles Trips File\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[start_station_name]"
-                      lineageId="Package\Load Singles Trips File\Flat File Source.Outputs[Flat File Source Output].Columns[&quot;start_station_name&quot;]" />
-                    <inputColumn
-                      refId="Package\Load Singles Trips File\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[&quot;start_station_id&quot;]"
-                      cachedDataType="wstr"
-                      cachedLength="50"
-                      cachedName="&quot;start_station_id&quot;"
-                      externalMetadataColumnId="Package\Load Singles Trips File\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[start_station_id]"
-                      lineageId="Package\Load Singles Trips File\Flat File Source.Outputs[Flat File Source Output].Columns[&quot;start_station_id&quot;]" />
-                    <inputColumn
-                      refId="Package\Load Singles Trips File\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[&quot;end_station_name&quot;]"
-                      cachedDataType="wstr"
-                      cachedLength="256"
-                      cachedName="&quot;end_station_name&quot;"
-                      externalMetadataColumnId="Package\Load Singles Trips File\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[end_station_name]"
-                      lineageId="Package\Load Singles Trips File\Flat File Source.Outputs[Flat File Source Output].Columns[&quot;end_station_name&quot;]" />
-                    <inputColumn
-                      refId="Package\Load Singles Trips File\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[&quot;member_casual&quot;]"
-                      cachedDataType="wstr"
-                      cachedLength="50"
-                      cachedName="&quot;member_casual&quot;"
-                      externalMetadataColumnId="Package\Load Singles Trips File\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[member_casual]"
-                      lineageId="Package\Load Singles Trips File\Flat File Source.Outputs[Flat File Source Output].Columns[&quot;member_casual&quot;]" />
-                    <inputColumn
-                      refId="Package\Load Singles Trips File\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[&quot;start_lat&quot;]"
-                      cachedDataType="r4"
-                      cachedName="&quot;start_lat&quot;"
-                      externalMetadataColumnId="Package\Load Singles Trips File\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[start_lat]"
-                      lineageId="Package\Load Singles Trips File\Flat File Source.Outputs[Flat File Source Output].Columns[&quot;start_lat&quot;]" />
-                    <inputColumn
-                      refId="Package\Load Singles Trips File\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[&quot;end_station_id&quot;]"
-                      cachedDataType="wstr"
-                      cachedLength="50"
-                      cachedName="&quot;end_station_id&quot;"
-                      externalMetadataColumnId="Package\Load Singles Trips File\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[end_station_id]"
-                      lineageId="Package\Load Singles Trips File\Flat File Source.Outputs[Flat File Source Output].Columns[&quot;end_station_id&quot;]" />
-                    <inputColumn
-                      refId="Package\Load Singles Trips File\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[&quot;start_lng&quot;]"
-                      cachedDataType="r4"
-                      cachedName="&quot;start_lng&quot;"
-                      externalMetadataColumnId="Package\Load Singles Trips File\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[start_lng]"
-                      lineageId="Package\Load Singles Trips File\Flat File Source.Outputs[Flat File Source Output].Columns[&quot;start_lng&quot;]" />
-                    <inputColumn
-                      refId="Package\Load Singles Trips File\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[&quot;end_lat&quot;]"
-                      cachedDataType="r4"
-                      cachedName="&quot;end_lat&quot;"
-                      externalMetadataColumnId="Package\Load Singles Trips File\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[end_lat]"
-                      lineageId="Package\Load Singles Trips File\Flat File Source.Outputs[Flat File Source Output].Columns[&quot;end_lat&quot;]" />
-                    <inputColumn
-                      refId="Package\Load Singles Trips File\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[&quot;end_lng&quot;]"
-                      cachedDataType="r4"
-                      cachedName="&quot;end_lng&quot;"
-                      externalMetadataColumnId="Package\Load Singles Trips File\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[end_lng]"
-                      lineageId="Package\Load Singles Trips File\Flat File Source.Outputs[Flat File Source Output].Columns[&quot;end_lng&quot;]" />
-                  </inputColumns>
-                  <externalMetadataColumns
-                    isUsed="True">
-                    <externalMetadataColumn
-                      refId="Package\Load Singles Trips File\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[ride_id]"
-                      dataType="wstr"
-                      length="50"
-                      name="ride_id" />
-                    <externalMetadataColumn
-                      refId="Package\Load Singles Trips File\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[rideable_type]"
-                      dataType="wstr"
-                      length="50"
-                      name="rideable_type" />
-                    <externalMetadataColumn
-                      refId="Package\Load Singles Trips File\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[started_at]"
-                      dataType="dbTimeStamp2"
-                      name="started_at"
-                      scale="7" />
-                    <externalMetadataColumn
-                      refId="Package\Load Singles Trips File\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[ended_at]"
-                      dataType="dbTimeStamp2"
-                      name="ended_at"
-                      scale="7" />
-                    <externalMetadataColumn
-                      refId="Package\Load Singles Trips File\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[start_station_name]"
-                      dataType="wstr"
-                      length="256"
-                      name="start_station_name" />
-                    <externalMetadataColumn
-                      refId="Package\Load Singles Trips File\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[start_station_id]"
-                      dataType="wstr"
-                      length="50"
-                      name="start_station_id" />
-                    <externalMetadataColumn
-                      refId="Package\Load Singles Trips File\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[end_station_name]"
-                      dataType="wstr"
-                      length="256"
-                      name="end_station_name" />
-                    <externalMetadataColumn
-                      refId="Package\Load Singles Trips File\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[end_station_id]"
-                      dataType="wstr"
-                      length="50"
-                      name="end_station_id" />
-                    <externalMetadataColumn
-                      refId="Package\Load Singles Trips File\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[start_lat]"
-                      dataType="r8"
-                      name="start_lat" />
-                    <externalMetadataColumn
-                      refId="Package\Load Singles Trips File\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[start_lng]"
-                      dataType="r8"
-                      name="start_lng" />
-                    <externalMetadataColumn
-                      refId="Package\Load Singles Trips File\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[end_lat]"
-                      dataType="r8"
-                      name="end_lat" />
-                    <externalMetadataColumn
-                      refId="Package\Load Singles Trips File\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[end_lng]"
-                      dataType="r8"
-                      name="end_lng" />
-                    <externalMetadataColumn
-                      refId="Package\Load Singles Trips File\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[member_casual]"
-                      dataType="wstr"
-                      length="50"
-                      name="member_casual" />
-                  </externalMetadataColumns>
-                </input>
-              </inputs>
-              <outputs>
-                <output
-                  refId="Package\Load Singles Trips File\OLE DB Destination.Outputs[OLE DB Destination Error Output]"
-                  exclusionGroup="1"
-                  isErrorOut="true"
-                  name="OLE DB Destination Error Output"
-                  synchronousInputId="Package\Load Singles Trips File\OLE DB Destination.Inputs[OLE DB Destination Input]">
-                  <outputColumns>
-                    <outputColumn
-                      refId="Package\Load Singles Trips File\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
-                      dataType="i4"
-                      lineageId="Package\Load Singles Trips File\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
-                      name="ErrorCode"
-                      specialFlags="1" />
-                    <outputColumn
-                      refId="Package\Load Singles Trips File\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
-                      dataType="i4"
-                      lineageId="Package\Load Singles Trips File\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
-                      name="ErrorColumn"
-                      specialFlags="2" />
-                  </outputColumns>
-                  <externalMetadataColumns />
-                </output>
-              </outputs>
-            </component>
-          </components>
-          <paths>
-            <path
-              refId="Package\Load Singles Trips File.Paths[Flat File Source Output]"
-              endId="Package\Load Singles Trips File\OLE DB Destination.Inputs[OLE DB Destination Input]"
-              name="Flat File Source Output"
-              startId="Package\Load Singles Trips File\Flat File Source.Outputs[Flat File Source Output]" />
-          </paths>
-        </pipeline>
-      </DTS:ObjectData>
+                      hasSideEffects="true"
+                      name="OLE DB Destination Input">
+                      <inputColumns>
+                        <inputColumn
+                          refId="Package\Foreach Loop Container\Load Singles Trips File\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[&quot;ride_id&quot;]"
+                          cachedDataType="wstr"
+                          cachedLength="50"
+                          cachedName="&quot;ride_id&quot;"
+                          externalMetadataColumnId="Package\Foreach Loop Container\Load Singles Trips File\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[ride_id]"
+                          lineageId="Package\Foreach Loop Container\Load Singles Trips File\Flat File Source.Outputs[Flat File Source Output].Columns[&quot;ride_id&quot;]" />
+                        <inputColumn
+                          refId="Package\Foreach Loop Container\Load Singles Trips File\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[&quot;rideable_type&quot;]"
+                          cachedDataType="wstr"
+                          cachedLength="50"
+                          cachedName="&quot;rideable_type&quot;"
+                          externalMetadataColumnId="Package\Foreach Loop Container\Load Singles Trips File\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[rideable_type]"
+                          lineageId="Package\Foreach Loop Container\Load Singles Trips File\Flat File Source.Outputs[Flat File Source Output].Columns[&quot;rideable_type&quot;]" />
+                        <inputColumn
+                          refId="Package\Foreach Loop Container\Load Singles Trips File\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[&quot;started_at&quot;]"
+                          cachedDataType="date"
+                          cachedName="&quot;started_at&quot;"
+                          externalMetadataColumnId="Package\Foreach Loop Container\Load Singles Trips File\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[started_at]"
+                          lineageId="Package\Foreach Loop Container\Load Singles Trips File\Flat File Source.Outputs[Flat File Source Output].Columns[&quot;started_at&quot;]" />
+                        <inputColumn
+                          refId="Package\Foreach Loop Container\Load Singles Trips File\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[&quot;ended_at&quot;]"
+                          cachedDataType="date"
+                          cachedName="&quot;ended_at&quot;"
+                          externalMetadataColumnId="Package\Foreach Loop Container\Load Singles Trips File\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[ended_at]"
+                          lineageId="Package\Foreach Loop Container\Load Singles Trips File\Flat File Source.Outputs[Flat File Source Output].Columns[&quot;ended_at&quot;]" />
+                        <inputColumn
+                          refId="Package\Foreach Loop Container\Load Singles Trips File\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[&quot;start_station_name&quot;]"
+                          cachedDataType="wstr"
+                          cachedLength="256"
+                          cachedName="&quot;start_station_name&quot;"
+                          externalMetadataColumnId="Package\Foreach Loop Container\Load Singles Trips File\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[start_station_name]"
+                          lineageId="Package\Foreach Loop Container\Load Singles Trips File\Flat File Source.Outputs[Flat File Source Output].Columns[&quot;start_station_name&quot;]" />
+                        <inputColumn
+                          refId="Package\Foreach Loop Container\Load Singles Trips File\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[&quot;start_station_id&quot;]"
+                          cachedDataType="wstr"
+                          cachedLength="50"
+                          cachedName="&quot;start_station_id&quot;"
+                          externalMetadataColumnId="Package\Foreach Loop Container\Load Singles Trips File\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[start_station_id]"
+                          lineageId="Package\Foreach Loop Container\Load Singles Trips File\Flat File Source.Outputs[Flat File Source Output].Columns[&quot;start_station_id&quot;]" />
+                        <inputColumn
+                          refId="Package\Foreach Loop Container\Load Singles Trips File\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[&quot;end_station_name&quot;]"
+                          cachedDataType="wstr"
+                          cachedLength="256"
+                          cachedName="&quot;end_station_name&quot;"
+                          externalMetadataColumnId="Package\Foreach Loop Container\Load Singles Trips File\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[end_station_name]"
+                          lineageId="Package\Foreach Loop Container\Load Singles Trips File\Flat File Source.Outputs[Flat File Source Output].Columns[&quot;end_station_name&quot;]" />
+                        <inputColumn
+                          refId="Package\Foreach Loop Container\Load Singles Trips File\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[&quot;member_casual&quot;]"
+                          cachedDataType="wstr"
+                          cachedLength="50"
+                          cachedName="&quot;member_casual&quot;"
+                          externalMetadataColumnId="Package\Foreach Loop Container\Load Singles Trips File\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[member_casual]"
+                          lineageId="Package\Foreach Loop Container\Load Singles Trips File\Flat File Source.Outputs[Flat File Source Output].Columns[&quot;member_casual&quot;]" />
+                        <inputColumn
+                          refId="Package\Foreach Loop Container\Load Singles Trips File\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[&quot;start_lat&quot;]"
+                          cachedDataType="r4"
+                          cachedName="&quot;start_lat&quot;"
+                          externalMetadataColumnId="Package\Foreach Loop Container\Load Singles Trips File\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[start_lat]"
+                          lineageId="Package\Foreach Loop Container\Load Singles Trips File\Flat File Source.Outputs[Flat File Source Output].Columns[&quot;start_lat&quot;]" />
+                        <inputColumn
+                          refId="Package\Foreach Loop Container\Load Singles Trips File\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[&quot;end_station_id&quot;]"
+                          cachedDataType="wstr"
+                          cachedLength="50"
+                          cachedName="&quot;end_station_id&quot;"
+                          externalMetadataColumnId="Package\Foreach Loop Container\Load Singles Trips File\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[end_station_id]"
+                          lineageId="Package\Foreach Loop Container\Load Singles Trips File\Flat File Source.Outputs[Flat File Source Output].Columns[&quot;end_station_id&quot;]" />
+                        <inputColumn
+                          refId="Package\Foreach Loop Container\Load Singles Trips File\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[&quot;start_lng&quot;]"
+                          cachedDataType="r4"
+                          cachedName="&quot;start_lng&quot;"
+                          externalMetadataColumnId="Package\Foreach Loop Container\Load Singles Trips File\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[start_lng]"
+                          lineageId="Package\Foreach Loop Container\Load Singles Trips File\Flat File Source.Outputs[Flat File Source Output].Columns[&quot;start_lng&quot;]" />
+                        <inputColumn
+                          refId="Package\Foreach Loop Container\Load Singles Trips File\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[&quot;end_lat&quot;]"
+                          cachedDataType="r4"
+                          cachedName="&quot;end_lat&quot;"
+                          externalMetadataColumnId="Package\Foreach Loop Container\Load Singles Trips File\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[end_lat]"
+                          lineageId="Package\Foreach Loop Container\Load Singles Trips File\Flat File Source.Outputs[Flat File Source Output].Columns[&quot;end_lat&quot;]" />
+                        <inputColumn
+                          refId="Package\Foreach Loop Container\Load Singles Trips File\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[&quot;end_lng&quot;]"
+                          cachedDataType="r4"
+                          cachedName="&quot;end_lng&quot;"
+                          externalMetadataColumnId="Package\Foreach Loop Container\Load Singles Trips File\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[end_lng]"
+                          lineageId="Package\Foreach Loop Container\Load Singles Trips File\Flat File Source.Outputs[Flat File Source Output].Columns[&quot;end_lng&quot;]" />
+                        <inputColumn
+                          refId="Package\Foreach Loop Container\Load Singles Trips File\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[source_file_name]"
+                          cachedDataType="wstr"
+                          cachedLength="50"
+                          cachedName="source_file_name"
+                          externalMetadataColumnId="Package\Foreach Loop Container\Load Singles Trips File\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[source_file_name]"
+                          lineageId="Package\Foreach Loop Container\Load Singles Trips File\Derived Column.Outputs[Derived Column Output].Columns[source_file_name]" />
+                      </inputColumns>
+                      <externalMetadataColumns
+                        isUsed="True">
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\Load Singles Trips File\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[ride_id]"
+                          dataType="wstr"
+                          length="50"
+                          name="ride_id" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\Load Singles Trips File\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[rideable_type]"
+                          dataType="wstr"
+                          length="50"
+                          name="rideable_type" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\Load Singles Trips File\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[started_at]"
+                          dataType="dbTimeStamp2"
+                          name="started_at"
+                          scale="7" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\Load Singles Trips File\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[ended_at]"
+                          dataType="dbTimeStamp2"
+                          name="ended_at"
+                          scale="7" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\Load Singles Trips File\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[start_station_name]"
+                          dataType="wstr"
+                          length="256"
+                          name="start_station_name" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\Load Singles Trips File\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[start_station_id]"
+                          dataType="wstr"
+                          length="50"
+                          name="start_station_id" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\Load Singles Trips File\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[end_station_name]"
+                          dataType="wstr"
+                          length="256"
+                          name="end_station_name" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\Load Singles Trips File\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[end_station_id]"
+                          dataType="wstr"
+                          length="50"
+                          name="end_station_id" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\Load Singles Trips File\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[start_lat]"
+                          dataType="r8"
+                          name="start_lat" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\Load Singles Trips File\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[start_lng]"
+                          dataType="r8"
+                          name="start_lng" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\Load Singles Trips File\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[end_lat]"
+                          dataType="r8"
+                          name="end_lat" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\Load Singles Trips File\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[end_lng]"
+                          dataType="r8"
+                          name="end_lng" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\Load Singles Trips File\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[member_casual]"
+                          dataType="wstr"
+                          length="50"
+                          name="member_casual" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\Load Singles Trips File\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[source_file_name]"
+                          dataType="wstr"
+                          length="50"
+                          name="source_file_name" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\Load Singles Trips File\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[created_date]"
+                          dataType="dbTimeStamp2"
+                          name="created_date"
+                          scale="7" />
+                      </externalMetadataColumns>
+                    </input>
+                  </inputs>
+                  <outputs>
+                    <output
+                      refId="Package\Foreach Loop Container\Load Singles Trips File\OLE DB Destination.Outputs[OLE DB Destination Error Output]"
+                      exclusionGroup="1"
+                      isErrorOut="true"
+                      name="OLE DB Destination Error Output"
+                      synchronousInputId="Package\Foreach Loop Container\Load Singles Trips File\OLE DB Destination.Inputs[OLE DB Destination Input]">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\Load Singles Trips File\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                          dataType="i4"
+                          lineageId="Package\Foreach Loop Container\Load Singles Trips File\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                          name="ErrorCode"
+                          specialFlags="1" />
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\Load Singles Trips File\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                          dataType="i4"
+                          lineageId="Package\Foreach Loop Container\Load Singles Trips File\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                          name="ErrorColumn"
+                          specialFlags="2" />
+                      </outputColumns>
+                      <externalMetadataColumns />
+                    </output>
+                  </outputs>
+                </component>
+              </components>
+              <paths>
+                <path
+                  refId="Package\Foreach Loop Container\Load Singles Trips File.Paths[Derived Column Output]"
+                  endId="Package\Foreach Loop Container\Load Singles Trips File\OLE DB Destination.Inputs[OLE DB Destination Input]"
+                  name="Derived Column Output"
+                  startId="Package\Foreach Loop Container\Load Singles Trips File\Derived Column.Outputs[Derived Column Output]" />
+                <path
+                  refId="Package\Foreach Loop Container\Load Singles Trips File.Paths[Flat File Source Output]"
+                  endId="Package\Foreach Loop Container\Load Singles Trips File\Derived Column.Inputs[Derived Column Input]"
+                  name="Flat File Source Output"
+                  startId="Package\Foreach Loop Container\Load Singles Trips File\Flat File Source.Outputs[Flat File Source Output]" />
+              </paths>
+            </pipeline>
+          </DTS:ObjectData>
+        </DTS:Executable>
+      </DTS:Executables>
+      <DTS:ForEachVariableMappings>
+        <DTS:ForEachVariableMapping
+          DTS:CreationName=""
+          DTS:DTSID="{9B7C2A36-036E-4EDC-8DD9-0B54C8D11A70}"
+          DTS:ObjectName="{9B7C2A36-036E-4EDC-8DD9-0B54C8D11A70}"
+          DTS:ValueIndex="0"
+          DTS:VariableName="User::SourceFileName" />
+      </DTS:ForEachVariableMappings>
     </DTS:Executable>
     <DTS:Executable
       DTS:refId="Package\Truncate trips_history"
@@ -849,11 +1025,11 @@
     <DTS:PrecedenceConstraint
       DTS:refId="Package.PrecedenceConstraints[Constraint]"
       DTS:CreationName=""
-      DTS:DTSID="{CB44B56E-0644-4AD0-B8C4-C16B3A5EDCBD}"
+      DTS:DTSID="{EA77E6E4-36FE-477F-BEEB-13640B7E7645}"
       DTS:From="Package\Truncate trips_history"
       DTS:LogicalAnd="True"
       DTS:ObjectName="Constraint"
-      DTS:To="Package\Load Singles Trips File" />
+      DTS:To="Package\Foreach Loop Container" />
   </DTS:PrecedenceConstraints>
   <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
 <!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
@@ -868,39 +1044,46 @@
       <GraphLayout
         Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="191,42"
-          Id="Package\Load Singles Trips File"
-          TopLeft="375,219" />
-        <NodeLayout
-          Size="185,42"
+          Size="184.8,41.6"
           Id="Package\Truncate trips_history"
-          TopLeft="187,74" />
+          TopLeft="192.833333014614,43.6666668776009" />
+        <NodeLayout
+          Size="191.2,41.6"
+          Id="Package\Foreach Loop Container\Load Singles Trips File"
+          TopLeft="42.4333177160893,69.46666666064" />
+        <ContainerLayout
+          HeaderHeight="43"
+          IsExpanded="True"
+          PanelSize="264.8,215.2"
+          Size="264.8,258.4"
+          Id="Package\Foreach Loop Container"
+          TopLeft="269.999985247851,168.133332164155" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint]"
-          TopLeft="279.5,116">
+          TopLeft="285.233333014614,85.2666668776009">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="191,103"
+              EndConnector="117.166652233237,82.8666652865542"
               Start="0,0"
-              End="191,95.5">
+              End="117.166652233237,75.3666652865542">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,47.5" />
+                    End="0,37.4333326432771" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,47.5"
-                    Point2="0,51.5"
-                    Point3="4,51.5" />
+                    Point1="0,37.4333326432771"
+                    Point2="0,41.4333326432771"
+                    Point3="4,41.4333326432771" />
                   <mssgle:LineSegment
-                    End="187,51.5" />
+                    End="113.166652233237,41.4333326432771" />
                   <mssgle:CubicBezierSegment
-                    Point1="187,51.5"
-                    Point2="191,51.5"
-                    Point3="191,55.5" />
+                    Point1="113.166652233237,41.4333326432771"
+                    Point2="117.166652233237,41.4333326432771"
+                    Point3="117.166652233237,45.4333326432771" />
                   <mssgle:LineSegment
-                    End="191,95.5" />
+                    End="117.166652233237,75.3666652865542" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -913,44 +1096,82 @@
     </LayoutInfo>
   </Package>
   <TaskHost
-    design-time-name="Package\Load Singles Trips File">
+    design-time-name="Package\Foreach Loop Container\Load Singles Trips File">
     <LayoutInfo>
       <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="156,42"
-          Id="Package\Load Singles Trips File\Flat File Source"
+          Size="156,41.6"
+          Id="Package\Foreach Loop Container\Load Singles Trips File\Flat File Source"
           TopLeft="239,117" />
         <NodeLayout
-          Size="177,42"
-          Id="Package\Load Singles Trips File\OLE DB Destination"
-          TopLeft="458,274" />
+          Size="176.8,41.6"
+          Id="Package\Foreach Loop Container\Load Singles Trips File\OLE DB Destination"
+          TopLeft="462.16666643901,374.533332634237" />
+        <NodeLayout
+          Size="152.8,41.6"
+          Id="Package\Foreach Loop Container\Load Singles Trips File\Derived Column"
+          TopLeft="342.499981286626,277.333331404792" />
         <EdgeLayout
-          Id="Package\Load Singles Trips File.Paths[Flat File Source Output]"
-          TopLeft="317,159">
+          Id="Package\Foreach Loop Container\Load Singles Trips File.Paths[Flat File Source Output]"
+          TopLeft="317,158.6">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="229.5,115"
+              EndConnector="101.899981286626,118.733331404792"
               Start="0,0"
-              End="229.5,107.5">
+              End="101.899981286626,111.233331404792">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,53.5" />
+                    End="0,55.366665702396" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,53.5"
-                    Point2="0,57.5"
-                    Point3="4,57.5" />
+                    Point1="0,55.366665702396"
+                    Point2="0,59.366665702396"
+                    Point3="4,59.366665702396" />
                   <mssgle:LineSegment
-                    End="225.5,57.5" />
+                    End="97.8999812866258,59.366665702396" />
                   <mssgle:CubicBezierSegment
-                    Point1="225.5,57.5"
-                    Point2="229.5,57.5"
-                    Point3="229.5,61.5" />
+                    Point1="97.8999812866258,59.366665702396"
+                    Point2="101.899981286626,59.366665702396"
+                    Point3="101.899981286626,63.366665702396" />
                   <mssgle:LineSegment
-                    End="229.5,107.5" />
+                    End="101.899981286626,111.233331404792" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Foreach Loop Container\Load Singles Trips File.Paths[Derived Column Output]"
+          TopLeft="418.899981286626,318.933331404792">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="131.666685152384,55.600001229445"
+              Start="0,0"
+              End="131.666685152384,48.100001229445">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,23.8000006147225" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,23.8000006147225"
+                    Point2="0,27.8000006147225"
+                    Point3="4,27.8000006147225" />
+                  <mssgle:LineSegment
+                    End="127.666685152384,27.8000006147225" />
+                  <mssgle:CubicBezierSegment
+                    Point1="127.666685152384,27.8000006147225"
+                    Point2="131.666685152384,27.8000006147225"
+                    Point3="131.666685152384,31.8000006147225" />
+                  <mssgle:LineSegment
+                    End="131.666685152384,48.100001229445" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -963,7 +1184,7 @@
     </LayoutInfo>
   </TaskHost>
   <PipelineComponentMetadata
-    design-time-name="Package\Load Singles Trips File\OLE DB Destination">
+    design-time-name="Package\Foreach Loop Container\Load Singles Trips File\OLE DB Destination">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>

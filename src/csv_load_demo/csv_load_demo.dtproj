@@ -26,7 +26,7 @@
           <SSIS:Property SSIS:Name="CreatorComputerName">LAGVNESDELL_01</SSIS:Property>
           <SSIS:Property SSIS:Name="Description">
           </SSIS:Property>
-          <SSIS:Property SSIS:Name="PasswordVerifier" SSIS:Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAA8gOTe7Z/qUO/1ViC85WubgAAAAACAAAAAAAQZgAAAAEAACAAAAB2eLefj9n6roxgON4aOvOnOutkPxVf16R79E/gZhfXLQAAAAAOgAAAAAIAACAAAADYIqCjoPbAsaTkOIZywYaT8SU8mVtjxdHERsMb6SpP/JAAAADW4/Gr5Og6SQG21BciTS/vQs3SZtc6CDBfTwQFV31x+tUBrcBetS37ny6NNcsvcjrVgVC/PMba7YjCwiYbPoG6cZDmwd//q6+DgemOS+JixIbhXi4Bb2gqc1iCgLCRB5WbX0rHiEPkD7FnXceci/ivAB4KxjdCKGj2ppi+tWxNNxQ20WBUbOmelBP0IsABNs1AAAAA+r97ervwNt64zgYXATo1Nt86KLkYCVNXg6S68tIsvGPXy6modiT3y6EZBoMc1aU+nFxe9zJtJg2l2aBdp+tRHA==</SSIS:Property>
+          <SSIS:Property SSIS:Name="PasswordVerifier" SSIS:Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAA8gOTe7Z/qUO/1ViC85WubgAAAAACAAAAAAAQZgAAAAEAACAAAAD15QQ68vTiPpbZWOlZVe0bHQEXlJQf5dIkgEP0D8b60gAAAAAOgAAAAAIAACAAAADW/3UB0NKac+hQqnmv0t2KM2inU9g0+ViAATHjdiQkX5AAAAAB6g9eDb8Q6OMknWV7IYvS3z3uTkw3OuVBbNWjNERshB6Wg7IsEc2rZVpdeOyLYLMFdoV+dNBs7JAEXykIcYJ+8fyZwTeIj7qhTWcFiCo6nnUmpYDApf+MX2+qZA5hS7UdYZvSWmGaC90R3Y7QALy/CxPEy8txoRpA+VYIsWkfjo4/1Y7Ia0vn2GuLfZ6hl29AAAAAYuIFMcWuzt22r2S2UuX6Tu9d1eZjfO86df8qjuMjLzovhDQVwft38ROOUWaZ2rwknLE9idC/UY097bC15vEuug==</SSIS:Property>
           <SSIS:Property SSIS:Name="FormatVersion">1</SSIS:Property>
         </SSIS:Properties>
         <SSIS:Packages>
@@ -42,10 +42,10 @@
                 <SSIS:Property SSIS:Name="Name">LoadTripFiles</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionMajor">1</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionMinor">0</SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionBuild">22</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionBuild">30</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionComments">
                 </SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionGUID">{702FC9FC-D68F-4D7F-83FA-EDB7AD3241EB}</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionGUID">{96CB8368-C6D6-4EB0-BD1E-B597BDC43443}</SSIS:Property>
                 <SSIS:Property SSIS:Name="PackageFormatVersion">8</SSIS:Property>
                 <SSIS:Property SSIS:Name="Description">
                 </SSIS:Property>
@@ -110,21 +110,6 @@
                     <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Value">false</SSIS:Property>
                     <SSIS:Property SSIS:Name="DataType">3</SSIS:Property>
-                  </SSIS:Properties>
-                </SSIS:Parameter>
-                <SSIS:Parameter SSIS:Name="CM.Csv Connection.ConnectionString">
-                  <SSIS:Properties>
-                    <SSIS:Property SSIS:Name="ID">
-                    </SSIS:Property>
-                    <SSIS:Property SSIS:Name="CreationName">
-                    </SSIS:Property>
-                    <SSIS:Property SSIS:Name="Description">
-                    </SSIS:Property>
-                    <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
-                    <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
-                    <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
-                    <SSIS:Property SSIS:Name="Value">C:\code\ssis\csv_load_data\pending\202502-divvy-tripdata.csv</SSIS:Property>
-                    <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
                   </SSIS:Properties>
                 </SSIS:Parameter>
                 <SSIS:Parameter SSIS:Name="CM.Csv Connection.DataRowsToSkip">
